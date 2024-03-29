@@ -9,7 +9,7 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string)
     })
     .catch((error) => {
         console.error(error.message);
-    }); //Here as string is used to typecast the  environment variable to string
+    }); // Here as string is used to typecast the  environment variable to string
 
 const app = express();
 
