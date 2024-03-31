@@ -4,6 +4,7 @@ import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
 import Hero from "./Hero";
 import UsernameMenu from "./UsernameMenu";
+import MobileNavLinks from "./MobileNavLinks";
 
 export {
     Header,
@@ -11,5 +12,6 @@ export {
     MainNav,
     MobileNav,
     Hero,
-    UsernameMenu
+    UsernameMenu,
+    MobileNavLinks
 }
