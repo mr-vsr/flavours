@@ -1,5 +1,5 @@
 import landingImage from "../assets/landing.png"
-import appDownloadImage from "../assets/appDownload.png"
+import {appDownloadImage} from "../assets/index"
 
 export default function HomePage() {
 return (
