@@ -5,6 +5,7 @@ import MobileNav from "./MobileNav";
 import Hero from "./Hero";
 import UsernameMenu from "./UsernameMenu";
 import MobileNavLinks from "./MobileNavLinks";
+import LoadingButton from "./LoadingButton";
 
 export {
     Header,
@@ -13,5 +14,6 @@ export {
     MobileNav,
     Hero,
     UsernameMenu,
-    MobileNavLinks
+    MobileNavLinks,
+    LoadingButton
 }
