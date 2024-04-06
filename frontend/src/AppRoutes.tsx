@@ -5,6 +5,7 @@ import {
     HomePage,
     UserProfilePage
 } from "./pages/index"
+import ProtectedRoutes from "./auth/ProtectedRoutes";
 
 const AppRoutes = () => {
     return (
@@ -22,12 +23,15 @@ const AppRoutes = () => {
                     <AuthCallbackPage />
                 } />
             <Route
+                element={<ProtectedRoutes />}>
+            <Route
                 path="/user-profile"
                 element={
                     <Layout>
                         <UserProfilePage />
                     </Layout>
                 } />
+            </Route>
             <Route
                 path="*"
                 element={
