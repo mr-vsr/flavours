@@ -20,7 +20,9 @@ app.use(cors());
 import userRoute from "./routes/user.routes"
 
 app.get("/health", (req: Request, res: Response) => {
-    res.send({ message: "Health OK!" });
+    res
+        .status(200)
+        .send({ message: "Health OK!" });
 });
 app.use("/api/v1/user", userRoute);
 
