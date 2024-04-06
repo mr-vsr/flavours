@@ -1,7 +1,8 @@
 import{Router} from "express";
 import {
     createCurrentUser,
-    updateCurrentUser
+    updateCurrentUser,
+    getCurrentUser
 } from "../controllers/user.controllers";
 import {
     jwtCheck,
@@ -13,6 +14,7 @@ const router = Router();
 
 router
     .post("/", jwtCheck, createCurrentUser)
-    .put("/", jwtCheck, jwtParse, validateUserRequest, updateCurrentUser);
+    .put("/", jwtCheck, jwtParse, validateUserRequest, updateCurrentUser)
+    .get("/",jwtCheck,jwtParse,getCurrentUser);
 
 export default router
