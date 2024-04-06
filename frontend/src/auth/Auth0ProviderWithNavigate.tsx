@@ -22,7 +22,6 @@ function Auth0ProviderWithNavigate({ children }:Props) {
     }
 
     const onRedirectCallback = () => {
-        // console.log("USER", user);
         navigate("/auth-callback");
     }
 

@@ -5,6 +5,7 @@ import {
 import UserProfileForm from "@/forms/user-profile-form/UserProfileForm";
 
 const UserProfilePage = () => {
+    
     const { currentUser, isLoading:isGetLoading } = useGetCurrentUser();
     const { updatedUser, isLoading: isUpdateLoading } = useUpdateUser();
     

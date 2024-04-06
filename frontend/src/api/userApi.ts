@@ -101,14 +101,16 @@ export const useGetCurrentUser = () => {
                 "Content-Type": "application/json",
             },
         });
+
         if (!response.ok) {
             throw new Error("Failed to fetch User");
         }
+
         return response.json();
     };
-
+    
     const { data: currentUser, isLoading, error } = useQuery("fetchCurrentUser", getUserRequest);
-
+    
     if (error) {
         toast.error(error.toString());
     }
