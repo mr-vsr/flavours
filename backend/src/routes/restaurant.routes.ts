@@ -3,6 +3,11 @@ import multer from "multer";
 import { 
     createMyRestaurant
 } from "../controllers/resturant.controllers";
+import {
+    jwtCheck,
+    jwtParse
+} from "../middlewares/auth.middleware"
+import { validateRestaurantRequest } from "../middlewares/validation";
 
 const router = Router();
 const storage = multer.memoryStorage();
@@ -15,6 +20,11 @@ const upload = multer({
 
 // /api/v1/resturanat
 
-router.post("/", upload.single("imageFile"), createMyRestaurant);
+router.post("/",
+    upload.single("imageFile"), 
+    validateRestaurantRequest,
+    jwtCheck,
+    jwtParse,
+    createMyRestaurant);
 
 export default router;
