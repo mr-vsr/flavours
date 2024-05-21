@@ -26,6 +26,7 @@ app.use(cors());
 //Routes Handler
 import userRoute from "./routes/user.routes";
 import restaurantRoutes from "./routes/restaurant.routes";
+import { arrayBuffer } from "stream/consumers";
 
 app.get("/health", (req: Request, res: Response) => {
     res
